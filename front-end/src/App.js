@@ -5,8 +5,9 @@ import Board from './UI/board';
 function App() {
   return (
 	<div className="App">
-		<Board></Board>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Chess_plt60.png"></img>
+		<Board>
+
+		</Board>
 		<div class="moves">
 			<h1>Moves</h1>
 			<p>e4</p>
