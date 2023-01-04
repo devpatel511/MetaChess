@@ -64,11 +64,11 @@ div * {
 	max-height: 100px;
 	float: left;
 	margin: 3px;
-	transition: all 0.5s ease-in-out;
+	/* transition: all 0.5s ease-in-out; */
 	border-radius: 5px;
 	font-size: 30pt;
 	padding: 0 0 0 6px;
-	cursor: pointer;
+	/* cursor: pointer; */
 	z-index: 1;
 	background: var(--light);
 }
@@ -79,18 +79,36 @@ div * {
 	width: 100%;
 }
 
-.grey {
-	background: rgba(128, 128, 128, 0.801);
-	/* background: var(--light); */
+.ocup {
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
 }
 
-.gamecell:hover {
+.ocup:hover {
 	color: #fff;
 	background: rgba(37, 88, 228, 0.712);
 	z-index: 2;
 	transform: translate(5px, -5px);
 	animation: neonBlueText 1.5s ease-in-out infinite alternate;
 }
+
+.grey {
+	background: rgba(128, 128, 128, 0.801);
+	/* background: var(--light); */
+}
+
+.green {
+	background: green;
+	cursor: pointer;
+}
+
+/* .gamecell:hover {
+	color: #fff;
+	background: rgba(37, 88, 228, 0.712);
+	z-index: 2;
+	transform: translate(5px, -5px);
+	animation: neonBlueText 1.5s ease-in-out infinite alternate;
+} */
 
 .moves {
 	position: relative;

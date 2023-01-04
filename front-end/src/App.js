@@ -8,7 +8,7 @@ function App() {
 		<Board>
 
 		</Board>
-		<div class="moves">
+		<div className="moves">
 			<h1>Moves</h1>
 			<p>e4</p>
 			<p>e5</p>
