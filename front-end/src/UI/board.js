@@ -177,9 +177,9 @@ function Board() {
             cells[x][y] = cells[x][y].slice(0, -1)
             if (moves[k].length > 2) {
                 const temp = moves[k][2]
-                if (temp === 1) {
+                if (temp === 1 & j === y-1) {
                     board[6-x][y-1] = null
-                } else if (temp === 2) {
+                } else if (temp === 2 & j === y-1) {
                     board[8-x][y-1] = null
                 } else if (temp & j === 2) {
                     board[7-x][y] = board[7-x][0]
