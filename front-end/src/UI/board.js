@@ -11,6 +11,7 @@ function Board() {
     const [moves, setMoves] = useState([]);
     const [turn, setTurn] = useState(0)
     const [clicked, setClicked] = useState(false)
+    const [passants, setPassants] = useState([])
 
     const audio = new Audio(move);
     var isGreyCell = false;
@@ -122,7 +123,11 @@ function Board() {
             const x = 7 - options[k][0]
             const y = 1 + options[k][1]
             cells[x][y] += "1"
-            temp.push([x, y])
+            if (options[k].length > 2) {
+                temp.push([x, y, options[k][2]])
+            } else {
+                temp.push([x, y])
+            }
         }
         setMoves(() => temp)
         setCells(cells.map(cell => cell))
@@ -144,16 +149,46 @@ function Board() {
         const j = parseInt(prop.charAt(1))
         board[i][j] = curr
         board[pos[0]][pos[1]] = null
-        DeleteMoves()
-        // setBoard(board.map(b => b))
+        DeleteMoves(j)
+        setBoard(board.map(b => b))
         setTurn(num => num === 0 ? 1 : 0)
         setClicked(false)
+        for (const p of passants) {
+            p.passant = false
+        }
+        setPassants([])
+        if (curr.id === "") {
+            if (curr.castle & curr.color === 0 & i === 3) {
+                curr.passant = true
+                setPassants([...passants, curr])
+            } else if (curr.castle & curr.color === 1 & i === 4) {
+                curr.passant = true
+                setPassants([...passants, curr])
+            }
+        }
+        curr.castle = false
         audio.play()
     }
 
-    const DeleteMoves = () => {
-        for (const [x, y] of moves) {
+    const DeleteMoves = (j) => {
+        for (let k=0; k<moves.length; k++) {
+            const x = moves[k][0]
+            const y = moves[k][1]
             cells[x][y] = cells[x][y].slice(0, -1)
+            if (moves[k].length > 2) {
+                const temp = moves[k][2]
+                if (temp === 1) {
+                    board[6-x][y-1] = null
+                } else if (temp === 2) {
+                    board[8-x][y-1] = null
+                } else if (temp & j === 2) {
+                    board[7-x][y] = board[7-x][0]
+                    board[7-x][0] = null
+                } else if (!temp & j === 6) {
+                    board[7-x][y-2] = board[7-x][7]
+                    board[7-x][7] = null
+                }
+            }
         }
         setCells(cells.map(c => c))
     }

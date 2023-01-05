@@ -5,6 +5,8 @@ class Piece {
         this.color = color
         this.id = id
         this.options = []
+        this.castle = true
+        this.passant = false
     }
 
     moves(i, j, board) {
@@ -24,13 +26,13 @@ class Piece {
                 }
                 // En-passant
                 if (i === 4 & j < 7 & board[i][j+1] instanceof Object) {
-                    if (board[i][j+1].color === 1 & board[i][j+1].id === "") {
-                        this.options.push([i+1, j+1, null])
+                    if (board[i][j+1].passant & board[i][j+1].color === 1 & board[i][j+1].id === "") {
+                        this.options.push([i+1, j+1, 1])
                     }
                 }
                 if (i === 4 & j > 0 & board[i][j-1] instanceof Object) {
-                    if (board[i][j-1].color === 1 & board[i][j-1].id === "") {
-                        this.options.push([i+1, j-1, null])
+                    if (board[i][j-1].passant & board[i][j-1].color === 1 & board[i][j-1].id === "") {
+                        this.options.push([i+1, j-1, 1])
                     }
                 }
                 // Move forward
@@ -56,13 +58,13 @@ class Piece {
                 }
                 // En-passant
                 if (i === 3 & j < 7 & board[i][j+1] instanceof Object) {
-                    if (board[i][j+1].color === 0 & board[i][j+1].id === "") {
-                        this.options.push([i-1, j+1, null])
+                    if (board[i][j+1].passant & board[i][j+1].color === 0 & board[i][j+1].id === "") {
+                        this.options.push([i-1, j+1, 2])
                     }
                 }
                 if (i === 3 & j > 0 & board[i][j-1] instanceof Object) {
-                    if (board[i][j-1].color === 0 & board[i][j-1].id === "") {
-                        this.options.push([i-1, j-1, null])
+                    if (board[i][j-1].passant & board[i][j-1].color === 0 & board[i][j-1].id === "") {
+                        this.options.push([i-1, j-1, 2])
                     }
                 }
                 // Move forward
@@ -434,6 +436,22 @@ class Piece {
                         this.options.push([i-1, j+1])
                     } else if (board[i-1][j+1].color === c) {
                         this.options.push([i-1, j+1])
+                    }
+                }
+                if (this.castle) {
+                    if (board[i][j-1] === null & board[i][j-2] === null & board[i][j-3] === null) {
+                        if (board[i][0] instanceof Object) {
+                            if (board[i][0].castle & board[i][0].id === "R" & board[i][0].color === this.color) {
+                                this.options.push([i, j-2, true])
+                            }
+                        }
+                    }
+                    if (board[i][j+1] === null & board[i][j+2] === null) {
+                        if (board[i][7] instanceof Object) {
+                            if (board[i][7].castle & board[i][7].id === "R" & board[i][7].color === this.color) {
+                                this.options.push([i, j+2, false])
+                            }
+                        }
                     }
                 }
             }
