@@ -6,9 +6,14 @@ import move from './src_chess_assets_moveSoundEffect.mp3';
 function Board() {
     const [board, setBoard] = useState([]);
     const [cells, setCells] = useState([]);
+    const [curr, setCurr] = useState(new Piece("", 0, ""));
+    const [pos, setPos] = useState([])
+    const [moves, setMoves] = useState([]);
+    const [turn, setTurn] = useState(0)
+    const [clicked, setClicked] = useState(false)
 
-    var isGreyCell = false;
     const audio = new Audio(move);
+    var isGreyCell = false;
 
     useEffect(() => {
         CreateCells();
@@ -44,7 +49,7 @@ function Board() {
         for (let i=2; i<6; i++) {
             temp.push([])
             for (let j=0; j<8; j++) {
-                temp[i].push(false)
+                temp[i].push(null)
             }
         }
         temp.push([])
@@ -63,6 +68,19 @@ function Board() {
         const j = parseInt(prop.charAt(1))
         if (board[i][j] instanceof Object) {
             return true
+        }
+        return false
+    }
+
+    const Hoverable = (prop) => {
+        const i = parseInt(prop.charAt(0))
+        const j = parseInt(prop.charAt(1))
+        if (board[i][j] instanceof Object) {
+            const p = board[i][j]
+            if (p.color === turn & cells[7-i][j+1].length <= 2) {
+                return true
+            }
+            return false
         }
         return false
     }
@@ -88,14 +106,26 @@ function Board() {
     }
 
     const Options = (prop) => {
+        if (clicked) {
+            DeleteMoves()
+        }
+        setClicked(true)
         const i = parseInt(prop.charAt(0))
         const j = parseInt(prop.charAt(1))
         const p = board[i][j]
-        if (p.id === "N" & p.color === 0) {
-            cells[7-i-2][j+2] += "1"
-            cells[7-i-2][j] += "1"
-            setCells(cells.map(cell => cell))
+        setCurr(p)
+        setPos([i, j])
+        var temp = []
+        p.moves(i, j, board)
+        const options = p.options
+        for (var k=0; k<options.length; k++) {
+            const x = 7 - options[k][0]
+            const y = 1 + options[k][1]
+            cells[x][y] += "1"
+            temp.push([x, y])
         }
+        setMoves(() => temp)
+        setCells(cells.map(cell => cell))
     }
 
     const IsGreen = (prop) => {
@@ -109,11 +139,23 @@ function Board() {
         }
     }
 
-    const Move = () => {
-        board[2][5] = board[0][6]
-        board[0][6] = false
+    const Move = (prop) => {
+        const i = parseInt(prop.charAt(0))
+        const j = parseInt(prop.charAt(1))
+        board[i][j] = curr
+        board[pos[0]][pos[1]] = null
+        DeleteMoves()
+        // setBoard(board.map(b => b))
+        setTurn(num => num === 0 ? 1 : 0)
+        setClicked(false)
         audio.play()
-        setBoard(board.map(b => b))
+    }
+
+    const DeleteMoves = () => {
+        for (const [x, y] of moves) {
+            cells[x][y] = cells[x][y].slice(0, -1)
+        }
+        setCells(cells.map(c => c))
     }
 
     return (
@@ -122,8 +164,8 @@ function Board() {
                 cell.map(square => (
                     IsRank(square) ? 
                         <div className="rank" key={square}>{square}</div> : 
-                        <div className={"gamecell " + (isGreyCell ? "grey " : "") + (IsPiece(square) ? "ocup ": "") + (IsGreen(square) ? "green " : "")} 
-                            key={square} onClick={IsPiece(square) ? (() => Options(square)) : (IsGreen(square) ? (() => Move()): null)}>
+                        <div className={"gamecell " + (isGreyCell ? "grey " : "") + (Hoverable(square) ? "ocup ": "") + (IsGreen(square) ? "green " : "")} 
+                            key={square} onClick={Hoverable(square) ? (() => Options(square)) : (IsGreen(square) ? (() => Move(square)): null)}>
                             {toggle(square)}
                             {IsPiece(square) ? <img className="piece" src={GetPiece(square)} alt=""></img>: ''}
                         </div>
