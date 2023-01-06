@@ -193,6 +193,36 @@ function Board() {
         setCells(cells.map(c => c))
     }
 
+    const PawnLastRow = (prop) => {
+        const i = parseInt(prop.charAt(0))
+        const j = parseInt(prop.charAt(1))
+        const p = board[i][j]
+        if (p instanceof Object) {
+            if (p.id === "") {
+                if (i === 7 & p.color === 0) {
+                    return true
+                } else if (i === 0 & p.color === 1) {
+                    return true
+                }
+                return false
+            }
+            return false
+        }
+        return false
+    }
+
+    const Color = (prop) => {
+        const i = parseInt(prop.charAt(0))
+        const j = parseInt(prop.charAt(1))
+        return board[i][j].color
+    }
+
+    const Swap = (prop, color, name) => {
+        const i = parseInt(prop.charAt(0))
+        const j = parseInt(prop.charAt(1))
+        board[i][j] = new Piece(name, color, name.charAt(0))
+    }
+
     return (
         <div className="board">
             {cells.map(cell => (
@@ -203,6 +233,22 @@ function Board() {
                             key={square} onClick={Hoverable(square) ? (() => Options(square)) : (IsGreen(square) ? (() => Move(square)): null)}>
                             {toggle(square)}
                             {IsPiece(square) ? <img className="piece" src={GetPiece(square)} alt=""></img>: ''}
+                            {PawnLastRow(square) ? 
+                                <div className='PawnAdv'>
+                                    <div onClick={() => Swap(square, Color(square), "Queen")}>
+                                        <img className='pieceAdv' src={assets["Queen"][Color(square)]} alt=""></img>
+                                    </div>
+                                    <div onClick={() => Swap(square, Color(square), "Nknight")}>
+                                        <img className='pieceAdv' src={assets["Nknight"][Color(square)]} alt=""></img>
+                                    </div>
+                                    <div onClick={() => Swap(square, Color(square), "Rook")}>
+                                        <img className='pieceAdv' src={assets["Rook"][Color(square)]} alt=""></img>
+                                    </div>
+                                    <div onClick={() => Swap(square, Color(square), "Bishop")}>
+                                        <img className='pieceAdv' src={assets["Bishop"][Color(square)]} alt=""></img>
+                                    </div>
+                                </div>
+                            : ''}
                         </div>
                 ))
             ))}

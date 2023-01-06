@@ -121,3 +121,24 @@ div * {
 	background: var(--dark);
 }
 
+.PawnAdv {
+	position: absolute;
+	z-index: 10;
+
+	background-color: beige;
+	border-radius: 2px;
+  	box-shadow: 0px 3px 24px var(--dark);
+}
+
+.pieceAdv {
+	background:rgba(128, 128, 128, 0.801);
+	z-index: 12;
+}
+
+.pieceAdv:hover {
+	color: #fff;
+	background: rgba(37, 88, 228, 0.712);
+	z-index: 13;
+	transform: translate(5px, -5px);
+	animation: neonBlueText 1.5s ease-in-out infinite alternate;
+}
