@@ -12,6 +12,9 @@ function Board() {
     const [turn, setTurn] = useState(0)
     const [clicked, setClicked] = useState(false)
     const [passants, setPassants] = useState([])
+    const [popupActive, setPopupActive] = useState(false)
+    const [color, setColor] = useState(0)
+    const [squareNew, setSquare] = useState("")
 
     const audio = new Audio(move);
     var isGreyCell = false;
@@ -148,6 +151,9 @@ function Board() {
         const i = parseInt(prop.charAt(0))
         const j = parseInt(prop.charAt(1))
         board[i][j] = curr
+        if (PawnLastRow(prop)) {
+            Popup(prop)
+        }
         board[pos[0]][pos[1]] = null
         DeleteMoves(j)
         setBoard(board.map(b => b))
@@ -211,15 +217,22 @@ function Board() {
         return false
     }
 
-    const Color = (prop) => {
-        const i = parseInt(prop.charAt(0))
-        const j = parseInt(prop.charAt(1))
-        return board[i][j].color
+    // const Color = (prop) => {
+    //     const i = parseInt(prop.charAt(0))
+    //     const j = parseInt(prop.charAt(1))
+    //     return board[i][j].color
+    // }
+
+    const Popup = (prop) => {
+        setPopupActive(true)
+        setSquare(prop)
+        setColor(curr.color)
     }
 
-    const Swap = (prop, color, name) => {
-        const i = parseInt(prop.charAt(0))
-        const j = parseInt(prop.charAt(1))
+    const Swap = (color, name) => {
+        setPopupActive(false)
+        const i = squareNew.charAt(0)
+        const j = squareNew.charAt(1)
         board[i][j] = new Piece(name, color, name.charAt(0))
     }
 
@@ -233,26 +246,30 @@ function Board() {
                             key={square} onClick={Hoverable(square) ? (() => Options(square)) : (IsGreen(square) ? (() => Move(square)): null)}>
                             {toggle(square)}
                             {IsPiece(square) ? <img className="piece" src={GetPiece(square)} alt=""></img>: ''}
-                            {PawnLastRow(square) ? 
-                                <div className='PawnAdv'>
-                                    <div onClick={() => Swap(square, Color(square), "Queen")}>
-                                        <img className='pieceAdv' src={assets["Queen"][Color(square)]} alt=""></img>
-                                    </div>
-                                    <div onClick={() => Swap(square, Color(square), "Nknight")}>
-                                        <img className='pieceAdv' src={assets["Nknight"][Color(square)]} alt=""></img>
-                                    </div>
-                                    <div onClick={() => Swap(square, Color(square), "Rook")}>
-                                        <img className='pieceAdv' src={assets["Rook"][Color(square)]} alt=""></img>
-                                    </div>
-                                    <div onClick={() => Swap(square, Color(square), "Bishop")}>
-                                        <img className='pieceAdv' src={assets["Bishop"][Color(square)]} alt=""></img>
-                                    </div>
-                                </div>
-                            : ''}
                         </div>
                 ))
             ))}
             
+            {popupActive ? (
+                <div className="popup">
+                    <div className="content">
+                        <h3>Pawn Promotion</h3>
+                        <div className="choices" onClick={() => Swap(color, "Queen")}>
+                            <img className='pieceAdv' src={assets["Queen"][color]} alt=""></img>
+                        </div>
+                        <div className={"choices grey "} onClick={() => Swap(color, "Nknight")}>
+                            <img className='pieceAdv' src={assets["Nknight"][color]} alt=""></img>
+                        </div>
+                        <div className={"choices grey "} onClick={() => Swap(color, "Rook")}>
+                            <img className='pieceAdv' src={assets["Rook"][color]} alt=""></img>
+                        </div>
+                        <div className="choices" onClick={() => Swap(color, "Bishop")}>
+                            <img className='pieceAdv' src={assets["Bishop"][color]} alt=""></img>
+                        </div>
+                    </div>
+                </div>
+            ) : ''}
+
             <div className="file"></div>
             <div className="file">a</div>
             <div className="file">b</div>
