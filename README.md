@@ -5,6 +5,7 @@ Tech Stack: JavaScript, MongoDB, Mongoose, Express.js, React, Node.js, HTML, CSS
 
 ## Rules
 Protect your KING! Check and CheckMates are concealed, ignorance will lose you the game or prevent you from definte wins. Be smart, aware and preemptive, victory is decided only when one king remains on the board! 
+
 \>\>\> faster wins == greater elo
 True
 
