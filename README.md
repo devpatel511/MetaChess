@@ -1,5 +1,5 @@
 # MetaChess
-(NOTE: link to game currently in progress)\
+NOTE: working on the link to the game :)\
 Tech Stack: JavaScript, MongoDB, Mongoose, Express.js, React, Node.js, HTML, CSS, Socket.IO
 
 ## Rules
