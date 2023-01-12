@@ -10,8 +10,11 @@ import Users from './UI/users';
 function App() {
   return (
 	<BrowserRouter>
+		<Navbar />
 		<Routes>
+			{/* <Navbar /> */}
 			<Route path="/" element={<Users/>}/>
+			<Route path="/game" element={Board}/>
 			{/* <Navbar />
 			<br/>
 			<Route path="/" exact>

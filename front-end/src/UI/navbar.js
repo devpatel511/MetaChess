@@ -7,7 +7,14 @@ export default class Navbar extends Component {
     return (
       <div>
         <nav>
-            <Link to="/">Home</Link>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/game">Game</Link>
+              </li>
+            </ul>
         </nav>
       </div>
     //   <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
