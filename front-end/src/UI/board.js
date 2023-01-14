@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'; 
-import Piece from '../Model/piece';
+import Piece from '../Model/piece'
 import assets from './assets';
 import move from './src_chess_assets_moveSoundEffect.mp3';
 

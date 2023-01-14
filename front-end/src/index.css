@@ -12,6 +12,35 @@ body {
 	color: var(--light);
 }
 
+.navbar {
+	width: 100%;
+	background-color: #555;
+	overflow: auto;
+}
+  
+.navbar Link {
+	float: left;
+	padding: 12px;
+	color: white;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.navbar Link:hover {
+	background-color: #000;
+}
+
+.active {
+	background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+	.navbar Link {
+		float: none;
+		display: block;
+	}
+}
+
 div * {
 	padding: 0;
 	margin: 0;
