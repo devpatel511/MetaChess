@@ -12,19 +12,8 @@ function App() {
 	<BrowserRouter>
 		<Navbar />
 		<Routes>
-			{/* <Navbar /> */}
 			<Route path="/" element={<Users/>}/>
-			<Route path="/game" element={Board}/>
-			{/* <Navbar />
-			<br/>
-			<Route path="/" exact>
-				<Board></Board>
-			</Route> */}
-			{/* <Route path="/edit/:id" />
-			<Route path="/create"  />
-			<Route path="/user">
-				<Board></Board>
-			</Route> */}
+			<Route path="/game" element={<Board/>}/>
 			{/* <div className="moves">
 				<h1>Moves</h1>
 				<p>e4</p>
