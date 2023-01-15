@@ -17,6 +17,7 @@ function App() {
 			<Route path="/game" element={<Game/>}/>
 			<Route path="/login" element={<h1>Login Page</h1>}/>
 			<Route path="/stats" element={<h1>Stats Page</h1>}/>
+			<Route path="/game/local" element={<Board/>}/>
 			{/* <div className="moves">
 				<h1>Moves</h1>
 				<p>e4</p>
