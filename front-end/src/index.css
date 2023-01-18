@@ -8,7 +8,7 @@
 }
 
 body {
-	background-color: var(--dark-alt);
+    background-color: var(--dark-alt);
 	color: var(--light);
 }
 
@@ -25,7 +25,13 @@ li {
 }
 
 nav {
-	background: linear-gradient(#3c4e6e, var(--dark-alt));
+	background: var(--dark-alt) linear-gradient(to bottom, hsl(37deg, 12%, 16%), hsl(37deg, 10%, 8%) 116px) no-repeat;
+	background-image: linear-gradient(rgb(46, 42, 36), rgb(22, 21, 18) 116px);
+	font-size: 14px;
+	overflow: hidden;
+	padding: 30px;
+	display: flex;
+ 	justify-content:space-between;
 }
 
 .link {
