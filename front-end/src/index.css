@@ -42,6 +42,10 @@ nav {
 	text-decoration: none;
 }
 
+.signUp {
+	float: right;
+}
+
 .link:hover:not(.active){
 	background-color: #111;
 }
