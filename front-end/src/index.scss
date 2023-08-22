@@ -1,0 +1,1652 @@
+:root {
+	--primary: #D81E5B;
+	--secondary: #8A4EFC;
+	--light: #EEE;
+	--light-alt: #61759b;
+	--dark: #131A26;
+	--dark-alt: #202B3E;
+	--globalPrimaryFont: -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Helvetica,Arial,sans-serif; 
+	--globalSecondaryFont: "Montserrat",sans-serif; 
+	--globalColorNeutral100: rgba(0, 0, 0, 0.2); 
+	--globalColorNeutral200:  rgba(0,0,0,.4); 
+}
+
+body {
+    background-color: var(--dark-alt);
+	color: var(--light);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	padding:0;
+    margin:0;
+}
+
+.elo-num {
+	opacity: 0.5;
+}
+
+.snipcss-sobXV {
+	@font-face { 
+		font-family:"lichess";
+		font-display:block;
+		src:url(https://lichess1.org/assets/_2OdhND/font/lichess.woff2) format("woff2"),url(https://lichess1.org/assets/_2OdhND/font/lichess.woff) format("woff");
+	  } 
+ 
+		  background:#161512 linear-gradient(to bottom, hsl(37, 12%, 16%), hsl(37, 10%, 8%) 116px) no-repeat;
+		  color:#bababa;
+		  direction:ltr;
+		  text-align:left;
+		  background-image:linear-gradient(rgb(46, 42, 36), rgb(22, 21, 18) 116px);
+		  font-size:16px;
+
+	  * { 
+		  box-sizing: inherit; 
+		  margin: 0; 
+		  padding: 0;
+	  } 
+	  
+		  background: #161512 linear-gradient(to bottom, hsl(37, 12%, 16%), hsl(37, 10%, 8%) 116px) no-repeat; 
+		  color: #bababa; 
+		  direction: ltr; 
+		  text-align: left; 
+		  overflow-x: hidden; 
+		  background-image: linear-gradient(rgb(46, 42, 36), rgb(22, 21, 18) 116px); 
+		  background-position-x: initial; 
+		  background-position-y: initial; 
+		  background-size: initial; 
+		  background-attachment: initial; 
+		  background-origin: initial; 
+		  background-clip: initial; 
+		  background-color: rgb(22, 21, 18);
+
+		  --site-header-height: 40px; 
+		  --site-header-margin: 0px; 
+		  --main-margin: 0;
+
+		  --board-scale: 1; 
+		  --col2-uniboard-width: minmax(calc(70vmin * var(--board-scale)), calc( 100vh * var(--board-scale) - calc(var(--site-header-height) + var(--site-header-margin)) - 3rem )); 
+		  --col3-uniboard-width: minmax(calc(70vmin * var(--board-scale)), calc( 100vh * var(--board-scale) - calc(var(--site-header-height) + var(--site-header-margin)) - 3rem ));
+		  --col2-uniboard-width: calc(min(calc( 100vw - var(--gauge-gap, 2vmin) - 240px - 2 * var(--main-margin, 0px) - 20px ), calc(100vh - calc(var(--site-header-height) + var(--site-header-margin)) - 1rem)) * var(--board-scale)); 
+		  --col3-uniboard-width: calc(min(calc( 100vw - 250px - 2vmin - var(--gauge-gap, 2vmin) - 240px - 2 * var(--main-margin, 0px) - 20px ), calc(100vh - calc(var(--site-header-height) + var(--site-header-margin)) - 1rem)) * var(--board-scale));
+	  
+	  html { 
+		  font-family: "Noto Sans",Sans-Serif;
+	  } 
+	  
+	  html { 
+		  box-sizing: border-box; 
+		  min-height: 100%; 
+		  color-scheme: dark;
+	  } 
+	  
+	  html { 
+		  -webkit-font-smoothing: antialiased; 
+		  -moz-osx-font-smoothing: grayscale;
+	  } 
+	  
+	  html { 
+		  font-size: 12px;
+	  } 
+
+		  border-radius: 3px;
+
+		  overflow: hidden;
+
+		  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+
+		  background: #262421; 
+		  padding: 1.5em;
+
+		  flex: 0 0 auto;
+	  
+	  *,:before,:after { 
+		  box-sizing: inherit; 
+		  margin: 0; 
+		  padding: 0;
+	  } 
+	  
+	  section:not(:last-child)  { 
+		  border-bottom: 1px solid #404040; 
+		  margin-bottom: 1.3333333333vmin; 
+		  padding-bottom: 1.3333333333vmin;
+	  } 
+	  
+	  .status  { 
+		  font-size: 18px;
+		  text-align: center;
+		  p {
+			text-align: left;
+			line-height: 25px;
+			font-size: 15px;
+		  }
+	  } 
+	  
+	  .game__meta__infos { 
+		  display: flex; 
+		  flex-flow: row nowrap; 
+		  align-items: center;
+	  } 
+	  
+	  .game__meta__infos { 
+		  position: relative;
+	  } 
+	  
+	  .user-link .line, #topnav .community-patron::after,.rp:before,.is:before,[data-icon]:before,.is-after:after { 
+		  font-size: 1.2em; 
+		  vertical-align: middle; 
+		  font-family: "lichess"; 
+		  font-style: normal; 
+		  font-weight: normal; 
+		  text-transform: none; 
+		  content: attr(data-icon); 
+		  opacity: .9; 
+		  unicode-bidi: isolate;
+	  } 
+
+	  .game__meta__infos:before { 
+		  font-size: 3rem; 
+		  margin-right: 4%;
+	  } 
+	  
+	  .game__meta__players { 
+		  margin-top: .3rem; 
+		  font-size: 90%;
+	  } 
+	  
+	  .user-link .line, #topnav .community-patron::after, .rp::before, .is::before, .is-after::after { 
+		  font-size: 1.2em; 
+		  vertical-align: middle; 
+		  font-family: "lichess"; 
+		  font-style: normal; 
+		  font-weight: normal; 
+		  text-transform: none; 
+		  content: attr(data-icon); 
+		  opacity: .9; 
+		  unicode-bidi: isolate;
+	  } 
+	  
+	  .is.text:before,.text[data-icon]:before { 
+		  margin-right: .4em; 
+		  margin-inline: 0 .4em;
+	  } 
+	  
+	  .color-icon.white:before { 
+		  content: "";
+	  } 
+	  
+	  .color-icon.black:before { 
+		  content: "";
+	  } 
+	  
+	  .user-link { 
+		  white-space: nowrap; 
+		  overflow: hidden;
+	  } 
+	  
+	  .user-link { 
+		  color: #bababa;
+	  } 
+	  
+	  time { 
+		  font-size: 90%; 
+		  opacity: .9;
+	  } 
+	  
+	  .game__meta__infos time  { 
+		  opacity: 1;
+	  }
+	
+	  width: 520px;
+}
+
+.bird-box {
+	display: flex;
+	flex-wrap: wrap; 
+	flex-direction: row;
+	justify-content: center; 
+	margin: 0 auto; 
+	max-width: 1200px;
+	@media (max-width: 1150px) {
+		padding-right: 70px;
+	}
+	@media (max-width: 560px) {
+		padding-right: 0px;
+	}
+}
+
+.match {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-left: 70px;
+	padding-right: 25px;
+	padding-top: 50px;
+	@media (max-width: 1150px) {
+		margin-top: 20px;
+		margin-bottom: 50px;
+		padding-left: 105px;
+	}
+}
+
+.info {
+	h1 {
+		font-size: xx-large;
+		font-weight: 500;
+	}
+	p {
+		color: var(--light);
+		line-height: 25px;
+		font-size: medium;
+	}
+	margin-top: auto;
+	margin-bottom: 130px;
+	text-align: left;
+	width: 600px;
+	height: 175px;
+}
+
+.lb {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 35px;
+
+	@media (max-width: 960px) {
+		.landing-board {
+		  display: none;
+		}
+
+		.info {
+			padding: 100px;
+			text-align: center;
+			margin-bottom: auto;
+			margin-top: -25px;
+			width: auto;
+			white-space: normal;
+			height: auto;
+		}
+	}
+}
+
+.landing-board {
+	margin-bottom: -100px;
+	--a: 8deg;
+	--r: 1,1;
+	width: 503px;
+	height: 538px;
+
+	img {
+		border-radius: 10px 10px 0 0;
+		width: 500px;
+	}
+
+	video {
+		display: none;
+	}
+
+	border-radius: 10px;
+
+	transform:
+    perspective(800px)
+    rotateY(25deg) scale(0.9)
+    rotateX(10deg);
+  filter: blur(2px);
+  transition: 0.6s ease all;
+
+  &:hover {
+	img:nth-child(2) {
+		visibility: hidden;
+		max-height: 0;
+	}
+	video {
+		display: block;
+		border-radius: 0 0 5px 5px;
+	}
+	--i: -1;
+    transform:
+      perspective(800px)
+      rotateY(-15deg)
+      translateY(-50px)
+      rotateX(10deg)
+      scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.reflection-content {
+	box-shadow: 0 0 16px rgba(0,0,0,1);
+	border-style: solid;
+	border-color: black;
+	border-radius: 10px;
+}
+
+.landing-board :nth-child(2) {
+	display: block;
+	border-radius: 0 0 10px 10px;
+}
+
+.reflection-container{
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+
+	.reflection-content{
+	  transform:rotateX(0) rotateY(0);
+	  pointer-events:none;
+	  transition:100ms linear transform;
+	  overflow:hidden;
+	  &:before{
+		content:'';
+		position:absolute;
+		width:200%;
+		height:200%;
+		left:-50%;
+		top:-50%;
+	  }
+	}
+	.reflection-grid-cell{
+	  position:absolute;
+	  z-index: 1;
+	  width:10%;
+	  height:10%;
+	}
+	@for $r from 1 to 11{ 
+	  @for $c from 1 to 11 {
+		.reflection-grid-cell-#{( ($r*10) + $c - 10)}{
+			cursor: initial;
+		  top:($r*10%)-10%;
+		  left:($c*10%)-10%;
+		}
+		.reflection-grid-cell-#{( ($r*10) + $c - 10)}:hover ~ .reflection-content{
+		  transform:rotateX((($r*-5)+25deg)) rotateY((-25deg+($c*5)));
+		  &:before{
+			transform:translateY(25-(5%*$r));
+		  }
+		}
+	  }
+	}
+}
+
+#js-cards-banner {
+		font-size:16px;
+		line-height:1.42857143;
+		box-sizing: border-box;
+	
+	.XD5gdSwMCmwAgVr_IStX { 
+		position: relative;
+	} 
+	
+	.WZBWH_5sUz9uH60_BL_z { 
+		display: flex; 
+		flex-direction: column; 
+		min-height: 100vh;
+	} 
+	
+		background-color: #f6f9fc; 
+		font-size: 16px; 
+		line-height: 1.42857143; 
+		margin: 0; 
+		padding: 0;
+
+		-moz-text-size-adjust: none; 
+		-webkit-text-size-adjust: none; 
+		text-size-adjust: none;
+	
+	.MLof_Q9zSKwZOpy6p3Jb { 
+		overflow: hidden; 
+		padding: 100px 20px; 
+		position: relative;
+	} 
+	
+	.F4H7C8jPGi_ogGHit66P { 
+		padding-bottom: 0;
+	} 
+	
+	.vKteZPXuIF7BD4zRel4g { 
+		padding-top: 150px;
+	} 
+	
+	*,:after,:before { 
+		box-sizing: border-box;
+	} 
+	
+	h2 { 
+		color: #02203c; 
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		line-height: 1.3;
+	} 
+	
+	h2 { 
+		font-weight: 400;
+	} 
+	
+	.FzRz73YnAPXoIYQ_RP9D { 
+		font-size: 35px;
+	} 
+	
+	.nhwKL8MxrZYvsBE_N3_V { 
+		text-align: center;
+	} 
+	
+	.FpmqdK2DsnlK2PXwdXIj { 
+		margin: 0 0 20px;
+	} 
+	
+	.w89irXKhOzGT05_UKAEp { 
+		margin: 0 0 50px; 
+		text-align: center;
+	} 
+	
+	.mrFUALy2uIACI7ds1u1R { 
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: center; 
+		margin: 0 auto; 
+		max-width: 1200px;
+	} 
+	
+	button { 
+		font-size: inherit;
+	} 
+	
+	button { 
+		cursor: pointer; 
+		line-height: inherit; 
+		margin: 0;
+	} 
+	
+	.chYKnLxjTHJmIakDOoAf { 
+		align-items: center; 
+		background-color: transparent; 
+		border: 2px solid #02203c; 
+		border-radius: 4px; 
+		color: #02203c; 
+		cursor: pointer; 
+		display: inline-flex; 
+		justify-content: center; 
+		margin: 0 auto; 
+		overflow: hidden; 
+		padding: 5px 0; 
+		position: relative; 
+		text-align: center; 
+		transition: background-color .2s,color .2s; 
+		width: 190px;
+	} 
+	
+	.jG_PDdgfd2dmt_x_02dv { 
+		align-items: center; 
+		border-radius: 4px; 
+		display: flex; 
+		flex: 1 1 30%; 
+		flex-direction: column; 
+		margin: 0 20px 20px; 
+		max-width: 400px; 
+		padding: 20px; 
+		text-align: center; 
+		transition: box-shadow .3s;
+	} 
+	
+	.mNPcalBEAo17emd4aOta:hover { 
+		box-shadow: 0 0 35px -2px rgba(0,0,0,.2); 
+
+		.m7APqcAlUDVo9GJOyvfk {
+			transition: 0.4s ease;
+			scale: 1.25;
+		}
+	} 
+	
+	.T3M2G76H_N4DZXUxmuV8 { 
+		background-color: #02203c; 
+		height: 100%; 
+		left: 0; 
+		overflow: hidden; 
+		position: absolute; 
+		transition: width .4s cubic-bezier(.34,.63,.29,.96); 
+		width: 0; 
+		z-index: 0;
+	} 
+	
+	@media (hover){ 
+	  .chYKnLxjTHJmIakDOoAf:hover .T3M2G76H_N4DZXUxmuV8 { 
+		width: 100%;
+	  } 
+	}     
+	
+	.SKTBFuqAHC_yWQ9kMUuj { 
+		margin: 0 15px 0 0; 
+		width: 30px;
+	} 
+	
+	span { 
+		font-size: inherit;
+	} 
+	
+	.uYxVsaNZQODsjTDvWVG4 { 
+		color: #02203c;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		margin-right: 10px;
+		margin-left: -10px;
+	} 
+	
+	.m7APqcAlUDVo9GJOyvfk { 
+		transition: 0.4s ease; 
+		width: 50px;
+	} 
+	
+	.m7APqcAlUDVo9GJOyvfk  { 
+		color: #626ee3;
+	} 
+	
+	h3 { 
+		color: #02203c; 
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		line-height: 1.3;
+	} 
+	
+	h3 { 
+		font-weight: 400;
+	} 
+	
+	.XG2As_Hn7kojQbehexhb { 
+		font-size: 20px; 
+		margin: 15px 0; 
+		text-transform: none;
+	} 
+	
+	p { 
+		color: #445d6e;
+	} 
+	
+	p { 
+		font-size: 14px; 
+		line-height: 1.7;
+	} 
+	
+	p { 
+		margin: 0;
+	} 
+	
+	p { 
+		font-size: inherit;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	} 
+	
+	.nY_3Mnm8SUH7gBabhMgg { 
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	} 
+	
+	.hm4cHqlukFRr5i4DEgi6 { 
+		font-size: 14px;
+	} 
+	
+	.eNWHleYeh2jssnY_NOtd { 
+		color: #445d6e;
+	} 
+	
+	.BncdWYZr_2wTec9oUDDf { 
+		text-align: inherit;
+	} 
+	
+	.H_gYJ5wAowgJY9mrSQ2N { 
+		font-style: normal;
+	} 
+	
+	.WWyAmMzBXME0am4Lqwiq { 
+		font-weight: 400;
+	} 
+	
+	.oP6QftbqApIrJbrBuyLv { 
+		align-items: center; 
+		display: flex; 
+		justify-content: center; 
+		padding: 5px 0; 
+		width: 190px;
+	} 
+	
+	a { 
+		text-decoration: none;
+	} 
+	
+	.nPFTD7BxQ6lNEAFxMGsa { 
+		background-position: 100% 100%; 
+		background-repeat: no-repeat; 
+		cursor: default; 
+		padding-bottom: 2px; 
+		transition: background-size .35s; 
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+	} 
+	
+	.jc1Q05tYAml7pq4qamLA { 
+		background-size: 0 7%; 
+		font-weight: 400;
+	} 
+	
+	.HvGPPPj_lV7gXpQPOeJy { 
+		white-space: nowrap;
+	} 
+	
+	.nPFTD7BxQ6lNEAFxMGsa  { 
+		background-image: linear-gradient(0deg,#626ee3,#626ee3); 
+		color: #626ee3;
+	} 
+	
+	.jc1Q05tYAml7pq4qamLA:hover { 
+		background-position-x: left!important; 
+		background-size: 100% 7%!important;
+	} 
+	
+	.K5NsQOvfVxLwjU9uMEAo { 
+		color: #fff;
+	} 
+	
+	.Bcc_7gxK9tuu09g6EMLx { 
+		color: #fff;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		margin-right: 10px;
+		margin-left: -10px;
+	} 	
+
+	padding-top: 200px;
+	width: 100%; 
+	@media (max-width: 960px) {
+		padding-top: 100px;
+	}
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.all {
+	margin-top: -90px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+  
+li {
+	float: left;
+}
+
+#customers {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#customers td, #customers th {
+	padding: 10px;
+}
+
+#customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: var(--dark);
+	color: #000000 opacity(20%);
+}
+
+#customers td {
+	border-top: 1px solid var(--dark-alt);
+	padding: 15px
+}
+
+.stats-table {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	background-color: var(--globalColorNeutral100); 
+	border-radius: .5rem; 
+	box-shadow: inset 0 -.1rem 0 0 var(--globalColorNeutral200); 
+	padding-top: 20px;
+	margin-left: 33px;
+	margin-right: 33px;
+	margin-bottom: 50px;
+	margin-top: -50px;
+}
+
+.leaderboard {
+	margin-top: 50px;
+
+	h2 {
+		font-size: 50px;
+	}
+
+	#lead img {
+		width: 50px;
+	}
+
+	.wl {
+		width: 25px;
+		margin-right: 10px;
+	}
+
+	.wil {
+		font-size: 17px;
+	}
+
+	@media (max-width: 600px) {
+		.wl {
+			width: 16px;
+		}
+
+		.wil {
+			font-size: 15px;
+		}
+	}
+
+	transform:
+		scale(0.75)
+		rotateY(-30deg)
+		rotateX(45deg)
+		translateZ(4.5rem);
+	transform-origin: 50% 100%;
+	transform-style: preserve-3d;
+	box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.25);
+	transition: 0.6s ease transform;
+
+	&:hover {
+		transform: scale(1);
+	}
+
+	&::before {
+		transform: translateZ(4rem);
+		&:hover {
+		transform: translateZ(0);
+		}
+	}
+
+	&::after {
+		transform: translateZ(-4rem);
+		&:hover {
+		transform: translateZ(-1px);
+		}
+	}
+}
+
+@media (max-width: 770px) {
+    .all {
+        margin-top: -20px;
+    }
+
+	.stats-table {
+		margin-top: 5px;
+	}
+	.leaderboard {
+		margin-top: 45px;
+	}
+}
+
+#lead {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+#lead img {
+	width: 33px;
+	height: auto;
+	margin-right: 10px;
+}
+
+.wil {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wl {
+	width: 20px;
+	height: auto;
+	margin-right: 4px;
+}
+
+.lld {
+	@media (max-width: 600px) {
+		.wl {
+			width: 12px;
+		}
+
+		.wil {
+			font-size: 12px;
+		}
+	}
+}
+
+nav {
+	font-size: 14px;
+	overflow: hidden;
+	padding: 30px;
+	display: flex;
+ 	justify-content:space-between;
+}
+
+.link {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 1.4rem; 
+}
+
+.centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.logo {
+	display: block;
+	padding: 14px 16px;
+
+	transition: 0.6s ease all;
+
+	&:hover {
+		scale: 1.25;
+		transform: rotate(10deg);
+	}
+}
+
+.signUp {
+	float: right;
+}
+
+.link:hover{
+	background-color: var(--globalColorNeutral100); 
+	border-radius: .5rem; 
+	box-shadow: inset 0 -.1rem 0 0 var(--globalColorNeutral200); 
+}
+  
+.active {
+	background-color: #04AA6D;
+}
+
+div * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.board {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	/* gap: 1px; */
+	grid-auto-rows: minmax(50px, auto);
+	text-align: center;
+	max-width: 504px;
+	max-height: 504px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 20px auto;
+	float: left;
+}
+
+.rank {
+	width: 100%;
+	height: 100%;
+	max-width: 50px;
+	max-height: 50px;
+	float: left;
+	margin: 3px;
+	padding: 18px 0 0 10px;
+	font-size: large;
+	text-align: left;
+}
+
+.file {
+	width: 100%;
+	height: 100%;
+	max-width: 50px;
+	max-height: 50px;
+	float: left;
+	padding: 0 0 0 13px;
+	font-size: large;
+}
+
+.gamecell {
+	border: 1px solid #000;
+	width: 60px;
+	height: 60px;
+	max-width: 100px;
+	max-height: 100px;
+	float: left;
+	margin: 3px;
+	border-radius: 5px;
+	font-size: 30pt;
+	padding: 0 0 0 6px;
+	z-index: 1;
+	background: var(--light);
+}
+
+.piece {
+	margin-top: 4px;
+	margin-left: -8px;
+	width: 100%;
+}
+
+.ocup {
+	transition: all 0.25s ease-in-out;
+	cursor: pointer;
+}
+
+.ocup:hover {
+	color: #fff;
+	background: rgba(37, 88, 228, 0.712);
+	z-index: 2;
+	transform: translate(5px, -5px);
+	animation: neonBlueText 1.5s ease-in-out infinite alternate;
+}
+
+.moves {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	float: right;
+	border: 1px solid #000;
+	border-radius: 5px;
+	padding: 0 0 0 6px;
+	background: var(--dark);
+}
+
+.pieceAdv {
+	margin-top: 4px;
+	margin-left: -12px;
+	width: 110%;
+	border-radius: 5px;
+	font-size: 30pt;
+	padding: 0 0 0 6px;
+	cursor: pointer;
+	z-index: 12;
+}
+
+.popup {
+	position: absolute;
+	top: 52.2%;
+	left: 57.2%;
+	transform: translate(-50%, -50%);
+  
+	width: 100%;
+	max-width: 250px;
+	height: 100%;
+	max-height: 250px;
+	background-color: var(--light);
+	padding: 32px;
+	border-radius: 16px;
+	box-shadow: 0px 3px 24px var(--dark);
+	float: left;
+	z-index: 100;
+	background: #202B3E;
+  }
+  
+.content {
+	align-items: center;
+	padding-left: 25px;
+	padding-top: 5px;
+}
+
+.justified {
+	margin-top: -15px;
+}
+
+.winner h2 {
+	white-space: nowrap;
+	overflow: hidden;
+	color: var(--light);
+	margin-bottom: 12px;
+	margin-right: 25px;
+	font-weight: 400;
+}
+
+.wb {
+	color: #12d77e
+}
+
+.winnder button:not(:last-child) {
+	border-bottom: none;
+}
+
+.winner button:hover {
+	background-color: #3e8e41;
+}
+
+.winner button:nth-child(even) {
+	background-color: #cef3f5;
+	color: #04AA6D;
+}
+
+.winner button:nth-child(even):hover {
+	background-color: #cef3f5c9;
+}
+
+.btn {
+	margin-top: 20px;
+}
+
+.winner {
+	top: 52.2%;
+	left: -11%;
+	width: 300px;
+    height: auto;
+    margin: 10px;
+    position: relative;
+	text-align: left;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.winner button {
+	background-color: #04AA6D;
+	border: 1px solid green;
+	color: white; 
+	padding: 10px 24px;
+	cursor: pointer; 
+	width: 50%;
+	display: block; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.popup {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	align-items: center;
+}
+  
+.popup h3{
+	white-space: nowrap;
+	overflow: hidden;
+	color: var(--light);
+	margin-bottom: 12px;
+	margin-right: 25px;
+	font-weight: 400;
+}
+
+.choices {
+	border: 1px solid #000;
+	width: 60px;
+	height: 60px;
+	max-width: 100px;
+	max-height: 100px;
+	float: left;
+	margin: 3px;
+	transition: all 0.25s ease-in-out;
+	border-radius: 5px;
+	font-size: 30pt;
+	padding: 0 0 0 6px;
+	cursor: pointer;
+	z-index: 1;
+	background: var(--light);
+}
+
+.grey {
+	background: rgba(128, 128, 128, 0.801);
+}
+
+.green {
+	background: green;
+	cursor: pointer;
+}
+
+.top-player {
+	margin-top: 10px;
+	margin-bottom: -13px;
+	margin-left: 30px;
+}
+
+.bottom-player {
+	margin-top: -21.5px;
+	margin-left: 450px;
+	margin-right: 100px;
+}
+
+.gameOptions {
+	background: linear-gradient(to bottom, #4a90e2, #1a6bcc);
+	color: #ffffff;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* chess.com game options */
+.snipcss-gGM3M {
+	
+		color:#312e2b;
+		font-family:var(--globalPrimaryFont);
+		font-size:1.4rem;
+		line-height:1.43;
+		background-image:var(--theme-background-image);
+	/* CSS Variables that may have been missed get put on body */ 
+		--globalColorLoss:  var(--color-red-400);  
+		--globalColorBgLoss:  var(--color-red-400);  
+		--globalColorBorderLoss:  var(--color-red-400);  
+		--globalColorDanger:  var(--color-red-400); 
+		--globalBackground:  rgba(0,0,0,.2);  
+		--globalColorThemeFull:  #fff;  
+		--globalColorThemeMid:  hsla(0,0%,100%,.72);  
+		--globalColorNeutral100:  rgba(0,0,0,.2);  
+		--globalColorNeutral200:  rgba(0,0,0,.4);  
+		--globalColorWin:  var(--color-green-300);  
+		--globalColorBgWin:  var(--color-green-300);  
+		--globalColorBorderWin:  var(--color-green-300);  
+		--globalColorSuccess:  var(--color-green-300);  
+		--gutterBoardToBottomPlayer:  var(--gutterSmall);  
+		--gutterBoardToTopPlayer:  var(--gutterSmall);  
+		--playerHeight:  4rem; 
+		--adWidth:  calc(16rem + var(--gutter)); 
+		--boardControlsWidth:  calc(var(--gutter)*2); 
+		--globalColorLoss:  var(--color-red-300);  
+		--globalColorBgLoss:  var(--color-red-400);  
+		--globalColorBorderLoss:  var(--color-red-300);  
+		--globalColorDanger:  var(--color-red-300); 
+		--navWidth:  14.5rem; 
+	
+		box-sizing: inherit;
+	
+		scrollbar-color: rgba(0,0,0,.45) transparent; 
+		scrollbar-width: thin;
+	
+	.direct-menu-items-wrap { 
+		overflow-y: auto;
+	} 
+	
+	.direct-menu-component { 
+		background-color: var(--globalBackground); 
+		border-radius: .5rem; 
+		box-shadow: 0 .1rem .1rem 0 rgba(0,0,0,.2); 
+		display: grid; 
+		grid-template-rows: minmax(15.5rem,max-content) 1fr; 
+		min-height: 100%;
+	} 
+	
+	.board-layout-sidebar { 
+		display: flex; 
+		flex: 1; 
+		flex-basis: 0%; 
+		flex-direction: column; 
+		margin-top: var(--gutter); 
+		min-height: var(--sidebarMinHeight); 
+		width: 100%;
+	} 
+	
+	@media (min-width: 960px){ 
+	  .board-layout-sidebar { 
+		grid-area: top/sidebar; 
+		height: 100%; 
+		margin-top: 0;
+	  } 
+	}     
+	
+		color: #312e2b; 
+		font-family: var(--globalPrimaryFont); 
+		font-size: 1.4rem; 
+		line-height: 1.43; 
+		margin: 0; 
+		padding: 0; 
+		touch-action: manipulation;
+	
+		--100vh: var(--dvh,100vh); 
+		--100vw: var(--dvw,100vw); 
+		--boardContainerWidth: max(var(--boardMinWidth),min(var(--boardMaxWidth),var(--boardMaxHeight))); 
+		--boardHeight: calc(var(--boardWidth)*var(--boardHeightToWidthRatio)); 
+		--boardHeightToWidthRatio: 1; 
+		--boardMaxHeight: (var(--100vh) - var(--judoHeight) - var(--boardTopGutter) - var(--horizontalNavHeight) - var(--playersHeight) - var(--gutterTopPlayerToJudo) - var(--gutter) - var(--gutterBoardToBottomPlayer) - var(--gutterBoardToTopPlayer)) /var(--boardHeightToWidthRatio); 
+		--boardMaxWidthSansOverride: var(--boardMaxWidthWithPieces) - var(--piecesWidth); 
+		--boardMaxWidth: min(var(--boardMaxWidthSansOverride),var(--modifiedBoardWidth,var(--boardMaxWidthSansOverride))); 
+		--boardMaxWidthWithPieces: var(--100vw) - var(--gutter) * 2 - var(--gutterLeftOfBoard) - var(--evalWidth); 
+		--boardMinWidth: 26.4rem; 
+		--boardRowHeight: max(calc(var(--100vh) - var(--gutter) - var(--gutterTopPlayerToJudo) - var(--judoHeight) - var(--boardTopGutter) - var(--horizontalNavHeight)),var(--sidebarMinHeight)); 
+		--shf: 4.9406564584124654e-324; 
+		--divisibleBy: 8; 
+		--subtractFrom: (0.05rem - 1e-10rem); 
+		--boardWidth: calc(((((var(--boardContainerWidth)/var(--divisibleBy)) - var(--subtractFrom))*var(--shf))/var(--shf))*var(--divisibleBy)); 
+		--evalWidth: 0rem; 
+		--gutterBoardToNav: var(--gutter); 
+		--gutterBoardToTopPlayer: 0rem; 
+		--gutterBoardToBottomPlayer: 0rem; 
+		--gutterBottomPlayerToAnalysis: 0rem; 
+		--gutterLeftOfBoard: 0rem; 
+		--boardControlsWidth: 0rem; 
+		--piecesWidth: 0rem; 
+		--playerHeight: 0rem; 
+		--playersHeight: calc(var(--playerHeight)*2); 
+		--adWidth: 0rem; 
+		--analysisHeight: 0rem; 
+		--boardTopGutter: 0rem; 
+		--evalAndGutter: calc(var(--gutterLeftOfBoard) + var(--evalWidth)); 
+		--gutter: 1.6rem; 
+		--gutterSmall: 1rem; 
+		--gutterTopPlayerToJudo: var(--gutter); 
+		--horizontalNavHeight: 4rem; 
+		--judoHeight: 0rem; 
+		--sidebarMaxWidth: 50rem; 
+		--sidebarMinHeight: 50rem; 
+		--sidebarMinWidth: 30rem; 
+		--verticalNavWidth: 0rem; 
+		--videoWidth: 0rem; 
+		padding: calc(var(--gutter) + var(--judoHeight) + var(--boardTopGutter) + var(--horizontalNavHeight)) var(--gutter) var(--gutter) calc(var(--verticalNavWidth) + var(--gutterBoardToNav));
+	
+	@media (min-width: 960px){ 
+	  body { 
+		--boardControlsWidth: var(--gutter); 
+		--boardControlsHeight: calc(var(--gutterBoardToTopPlayer) + var(--playerHeight) + var(--boardHeight)); 
+		--boardMaxHeight: (var(--100vh) - var(--judoHeight) - var(--boardTopGutter) - var(--playersHeight) - var(--gutterTopPlayerToJudo) - var(--gutter) - var(--gutterBoardToBottomPlayer) - var(--gutterBoardToTopPlayer) - var(--gutterBottomPlayerToAnalysis) - var(--analysisHeight)) /var(--boardHeightToWidthRatio); 
+		--boardMaxWidthWithPieces: var(--100vw) - var(--verticalNavWidth) - var(--gutterBoardToNav) - var(--gutter) - var(--boardControlsWidth) - var(--gutterLeftOfBoard) - var(--evalWidth) - var(--sidebarMinWidth) - var(--adWidth) - var(--extraColumnLeftOfBoard,0rem); 
+		--gutterBoardToNav: 1.2rem; 
+		--horizontalNavHeight: 0rem; 
+		--verticalNavWidth: var(--navWidth,14.5rem); 
+		display: grid; 
+		grid-template-columns: [left-gutter] 1fr [extra-left] var(--extraColumnLeftOfBoard,0) [board-layout] min-content [sidebar] minmax(var(--sidebarMinWidth),var(--sidebarMaxWidth)) [right-gutter] 1fr [ad] var(--adWidth) [videos] var(--videoWidth) [extraneous-dom] 0; 
+		grid-template-rows: [top] var(--boardRowHeight) [bottom] auto;
+	  } 
+	}     
+	
+	@media (min-resolution: 192dpi){ 
+	  body { 
+		--divisibleBy: 16; 
+		--subtractFrom: (0.025rem - 1e-10rem);
+	  } 
+	}     
+	
+
+		--dvh: 100dvh; 
+		--dvw: 100dvw;
+
+		--globalColorLoss: var(--color-red-400); 
+		--globalColorBgLoss: var(--color-red-400); 
+		--globalColorBorderLoss: var(--color-red-400); 
+		--globalColorDanger: var(--color-red-400);
+
+		--globalBackground: rgba(0,0,0,.2); 
+		--globalColorThemeFull: #fff; 
+		--globalColorThemeMid: hsla(0,0%,100%,.72); 
+		--globalColorNeutral100: rgba(0,0,0,.2); 
+		--globalColorNeutral200: rgba(0,0,0,.4); 
+		--globalColorWin: var(--color-green-300); 
+		--globalColorBgWin: var(--color-green-300); 
+		--globalColorBorderWin: var(--color-green-300); 
+		--globalColorSuccess: var(--color-green-300); 
+	
+	body.theme-background { 
+		background-attachment: fixed; 
+		background-color: var(--theme-background-color,#312e2b); 
+		background-image: var(--theme-background-image); 
+		background-position: 50%; 
+		background-size: cover;
+	} 
+	
+	body.with-players { 
+		--gutterBoardToBottomPlayer: var(--gutterSmall); 
+		--gutterBoardToTopPlayer: var(--gutterSmall); 
+		--playerHeight: 4rem;
+	} 
+	
+	@media (min-width: 1200px){ 
+	  body.with-und { 
+		--adWidth: calc(16rem + var(--gutter));
+	  } 
+	}     
+	
+	@media (min-width: 960px){ 
+	  body.with-controls { 
+		--boardControlsWidth: calc(var(--gutter)*2);
+	  } 
+	}     
+	
+	.dark-mode.cc-red { 
+		--globalColorLoss: var(--color-red-300); 
+		--globalColorBgLoss: var(--color-red-400); 
+		--globalColorBorderLoss: var(--color-red-300); 
+		--globalColorDanger: var(--color-red-300);
+	} 
+	
+	@media (min-width: 78.125em){ 
+	  :root body:not(.nav-collapsed)  { 
+		--navWidth: 14.5rem;
+	  } 
+	}     
+	
+	html { 
+		box-sizing: border-box; 
+		font-size: 62.5%;
+	} 
+	
+	:root { 
+		--color-green-300: #81b64c; 
+		--color-green-400: #5d9948; 
+		--color-red-300: #fa412d; 
+		--color-red-400: #e02828; 
+		--color-red-500: #ad1f24; 
+		--globalBackground: #fff; 
+		--globalColorThemeFull: #312e2b; 
+		--globalColorThemeMid: #666564; 
+		--globalColorNeutral100: #f1f1f1; 
+		--globalColorNeutral200: #dad8d6; 
+		--globalPrimaryFont: -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Helvetica,Arial,sans-serif; 
+		--globalSecondaryFont: "Montserrat",sans-serif; 
+		--globalTitledPlayerColor: var(--color-red-500); 
+		--globalColorWin: var(--color-green-400); 
+		--globalColorBgWin: var(--color-green-300); 
+		--globalColorBorderWin: var(--color-green-300); 
+		--globalColorSuccess: var(--color-green-400); 
+	} 
+	
+	@media (min-width: 60em){ 
+	  :root { 
+		--navWidth: 5rem;
+	  } 
+	}     
+	
+	:root { 
+		--theme-background-color: #302E2B; 
+	} 
+	
+		grid-row-gap: .4rem; 
+		display: grid; 
+		grid-template-columns: minmax(1.2rem,3.2rem) [main] minmax(27.6rem,1fr) minmax(1.2rem,3.2rem); 
+		padding-bottom: 2.4rem;
+		margin-top: -50px;
+	
+	a { 
+		color: inherit; 
+		text-decoration: none;
+	} 
+	
+	a { 
+		cursor: pointer;
+	} 
+	
+	.direct-menu-item-component { 
+		background-color: var(--globalColorNeutral100); 
+		border-radius: .5rem; 
+		box-shadow: inset 0 -.1rem 0 0 var(--globalColorNeutral200); 
+		display: grid; 
+		gap: 2rem; 
+		grid-template-columns: 4.8rem 1fr; 
+		min-height: 8.8rem; 
+		padding: 2rem;
+	} 
+	
+	.direct-menu-item { 
+		grid-column: main;
+	} 
+	
+	.direct-menu-item-component:hover { 
+		background-color: var(--globalColorNeutral200);
+	} 
+	
+	.direct-menu-image-img { 
+		background-position: 50%; 
+		background-repeat: no-repeat; 
+		background-size: 100%; 
+	} 
+	
+	.direct-menu-image-blitz { 
+		background-image: url(https://www.chess.com/bundles/web/images/color-icons/blitz.a0e36339.svg);
+	} 
+	
+	.direct-menu-item-img { 
+		height: 4.8rem; 
+		margin: 0 auto; 
+		width: 4.8rem;
+	} 
+	
+	.direct-menu-item-text { 
+		display: flex; 
+		flex-direction: column; 
+		gap: .4rem;
+	} 
+	
+	.direct-menu-image-computer { 
+		background-image: url(https://www.chess.com/bundles/web/images/color-icons/computer.2318c3b4.svg);
+	} 
+	
+	.direct-menu-image-friend { 
+		background-image: url(https://www.chess.com/bundles/web/images/color-icons/handshake.fb30f50b.svg);
+	} 
+	
+	.direct-menu-image-tournaments { 
+		background-image: url(https://www.chess.com/bundles/web/images/color-icons/tournaments.6de54f69.svg);
+	} 
+	
+	.direct-menu-image-variants { 
+		background-image: url(https://www.chess.com/bundles/web/images/color-icons/variants.1a79e732.svg);
+	} 
+	
+	h2 { 
+		font-weight: 600; 
+		margin: 0; 
+		padding: 0;
+	} 
+	
+	h2 { 
+		font-size: 1.8rem;
+	} 
+	
+	.direct-menu-item-title { 
+		color: var(--globalColorThemeFull); 
+		font-family: var(--globalSecondaryFont); 
+		font-size: 2.2rem; 
+		font-weight: 700; 
+		line-height: 1.1;
+	} 
+	
+	.direct-menu-item-label { 
+		color: var(--globalColorThemeMid); 
+		font-size: 1.4rem; 
+		line-height: 1.2;
+	} 	
+}
+/* chess.com game options */
+
+.contact-pointer {
+	cursor: pointer !important;
+}
+
+.choices:hover {
+	color: #fff;
+	background: rgba(37, 88, 228, 0.712);
+	z-index: 13;
+	transform: translate(5px, -5px);
+	animation: neonBlueText 1.5s ease-in-out infinite alternate;
+}
+
+.neonblue_txt {
+	animation: neonBlueText 1.5s ease-in-out infinite alternate;
+}
+
+.neonorange_txt:hover {
+	animation: neonOrangeText 1.5s ease-in-out infinite alternate;
+}
+
+.neongreen_txt {
+	animation: neonGreenText 1.5s ease-in-out infinite alternate;
+}
+  
+  /* --- N E O N    T E X T --- */
+  @keyframes neonBlueText {
+	from {
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+		0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+	}
+	to {
+	  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+		0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+	}
+  }
+  
+  @keyframes neonOrangeText {
+	from {
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff9900,
+		0 0 70px #ff9900, 0 0 80px #ff9900, 0 0 100px #ff9900, 0 0 150px #ff9900;
+	}
+	to {
+	  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff9900,
+		0 0 35px #ff9900, 0 0 40px #ff9900, 0 0 50px #ff9900, 0 0 75px #ff9900;
+	}
+  }
+  
+  @keyframes neonGreenText {
+	from {
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #b6ff00,
+		0 0 70px #b6ff00, 0 0 80px #b6ff00, 0 0 100px #b6ff00, 0 0 150px #b6ff00;
+	}
+	to {
+	  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #b6ff00,
+		0 0 35px #b6ff00, 0 0 40px #b6ff00, 0 0 50px #b6ff00, 0 0 75px #b6ff00;
+	}
+  }
+  /* --- N E O N --- */
+  
+  /* animation: neon 1.5s ease-in-out infinite alternate; */
+  
+  @keyframes neonBlue {
+	from {
+	  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228dff,
+		0 0 70px #228dff, 0 0 80px #228dff, 0 0 100px #228dff, 0 0 150px #228dff;
+	}
+	to {
+	  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228dff,
+		0 0 35px #228dff, 0 0 40px #228dff, 0 0 50px #228dff, 0 0 75px #228dff;
+	}
+  }
+  
+  /*! * * * * * * * * * * * * * * * * * * * *\  
+	CSShake :: shake-little
+	v1.5.0
+	CSS classes to move your DOM
+	(c) 2015 @elrumordelaluz
+	http://elrumordelaluz.github.io/csshake/
+	Licensed under MIT
+  \* * * * * * * * * * * * * * * * * * * * */
+  .shake-little {
+	display: inline-block;
+	transform-origin: center center; }
+  
+  .shake-freeze,
+  .shake-constant.shake-constant--hover:hover,
+  .shake-trigger:hover .shake-constant.shake-constant--hover {
+	animation-play-state: paused; }
+  
+  .shake-freeze:hover,
+  .shake-trigger:hover .shake-freeze, .shake-little:hover,
+  .shake-trigger:hover .shake-little {
+	animation-play-state: running; }
+  
+  @keyframes shake-little {
+	2% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	4% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	6% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	8% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	10% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	12% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	14% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	16% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	18% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	20% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	22% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	24% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	26% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	28% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	30% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	32% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	34% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	36% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	38% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	40% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	42% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	44% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	46% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	48% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	50% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	52% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	54% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	56% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	58% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	60% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	62% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	64% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	66% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	68% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	70% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	72% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	74% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	76% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	78% {
+	  transform: translate(0px, 0px) rotate(0.5deg); }
+	80% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	82% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	84% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	86% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	88% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	90% {
+	  transform: translate(0px, 1px) rotate(0.5deg); }
+	92% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	94% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	96% {
+	  transform: translate(1px, 0px) rotate(0.5deg); }
+	98% {
+	  transform: translate(1px, 1px) rotate(0.5deg); }
+	0%, 100% {
+	  transform: translate(0, 0) rotate(0); } }
+  
+  .shake-little:hover,
+  .shake-trigger:hover .shake-little, .shake-little.shake-freeze, .shake-little.shake-constant {
+	animation-name: shake-little;
+	animation-duration: 100ms;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite; }
