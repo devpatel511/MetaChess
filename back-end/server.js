@@ -20,7 +20,7 @@ const server = http.createServer(app2);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: "https://fancy-lokum-132358.netlify.app/",
         methods: ["GET", "POST"],
     },
 })
