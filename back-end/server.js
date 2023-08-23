@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const cors = require ('cors');
 const jsChessEngine = require('js-chess-engine')
 const { aiMove } = jsChessEngine
+require('dotenv').config()
 
 const app = express();
 
