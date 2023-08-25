@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = "http://localhost:3001"
+const API_BASE = "https://metachess-server.onrender.com"
 
 const Leaderboard = () => {
     const [users, setUsers] = useState([]);

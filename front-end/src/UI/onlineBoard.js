@@ -26,8 +26,8 @@ const theme = extendTheme({
     }
   });
 
-var socket = io.connect("http://localhost:3002");;
-const API_BASE = "http://localhost:3001/game/online/"
+var socket = io.connect("https://metachess-socket.onrender.com");;
+const API_BASE = "https://metachess-server.onrender.com/game/online/"
 
 function OnlineBoard() {
     const [board, setBoard] = useState([]);
@@ -62,7 +62,7 @@ function OnlineBoard() {
     useEffect(() => {
         socket.on("foe_name", (datoid) => {
             setFoe(datoid.name);
-            fetch("http://localhost:3001/user/elo", {
+            fetch("https://metachess-server.onrender.com/user/elo", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -60,7 +60,7 @@ const theme = extendTheme({
   }
 });
 
-const API_BASE = "http://localhost:3001"
+const API_BASE = "https://metachess-server.onrender.com"
 
 function Login() {
   const [username, setUsername] = useState('');
