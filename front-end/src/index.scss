@@ -195,6 +195,14 @@ body {
 	  }
 	
 	  width: 520px;
+
+	  @media (max-width: 500px) {
+		margin-left: 100px;
+	}
+
+	@media (max-width: 350px) {
+		margin-left: 200px;
+	}
 }
 
 .bird-box {
@@ -781,6 +789,21 @@ li {
 	}
 }
 
+@media (max-width: 500px) {
+	.stats-table {
+		overflow-x: auto;
+
+		h2 {
+			font-size: 25px;
+
+		}
+
+		#lead img {
+			width: 30px;
+		}
+	}
+}
+
 #lead {
 	display: flex;
 	align-items: center;
@@ -1350,7 +1373,7 @@ div * {
 		--theme-background-color: #302E2B; 
 	} 
 	
-		grid-row-gap: .4rem; 
+		grid-row-gap: 0.9rem; 
 		display: grid; 
 		grid-template-columns: minmax(1.2rem,3.2rem) [main] minmax(27.6rem,1fr) minmax(1.2rem,3.2rem); 
 		padding-bottom: 2.4rem;
@@ -1445,6 +1468,10 @@ div * {
 		font-size: 1.4rem; 
 		line-height: 1.2;
 	} 	
+
+	@media (max-width: 480px) {
+		margin-left: -45px;
+	}
 }
 /* chess.com game options */
 
