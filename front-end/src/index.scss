@@ -244,7 +244,7 @@ body {
 	p {
 		color: var(--light);
 		line-height: 25px;
-		font-size: medium;
+		font-size: large;
 	}
 	margin-top: auto;
 	margin-bottom: 130px;
@@ -272,6 +272,16 @@ body {
 			width: auto;
 			white-space: normal;
 			height: auto;
+		}
+	}
+
+	@media (min-width: 1500px) {
+		justify-content: center;
+		.landing-board {
+			margin-left: 75px
+		}
+		.info {
+			margin-right: 75px;
 		}
 	}
 }
@@ -1373,7 +1383,7 @@ div * {
 		--theme-background-color: #302E2B; 
 	} 
 	
-		grid-row-gap: 0.9rem; 
+		grid-row-gap: 0.5rem; 
 		display: grid; 
 		grid-template-columns: minmax(1.2rem,3.2rem) [main] minmax(27.6rem,1fr) minmax(1.2rem,3.2rem); 
 		padding-bottom: 2.4rem;

@@ -52,7 +52,7 @@ function Home() {
                     ]}
                     wrapper="span"
                     speed={80}
-                    style={{ fontSize: '2em', display: 'inline-block', backgroundImage: 'radial-gradient(849px at 0.9% 2.8%, rgb(255, 157, 255) 0%, rgb(255, 102, 142) 43.4%, rgb(255, 31, 56) 83.1%)',
+                    style={{ fontSize: '2.05em', display: 'inline-block', backgroundImage: 'radial-gradient(849px at 0.9% 2.8%, rgb(255, 157, 255) 0%, rgb(255, 102, 142) 43.4%, rgb(255, 31, 56) 83.1%)',
                     color: 'transparent',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',

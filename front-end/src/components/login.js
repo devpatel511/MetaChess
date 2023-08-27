@@ -140,6 +140,9 @@ function Login() {
                 <Text color="fg.muted">
                   Don't have an account? Sign up with a unique Username
                 </Text>
+                <Text fontSize="sm">
+                  (please wait for the Leaderboard to display users)
+                </Text>
               </Stack>
             </Stack>
             <Box
