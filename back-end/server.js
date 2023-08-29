@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require ('cors');
-const aiMove = require("js-chess-engine");
+const { aiMove } = require("js-chess-engine");
 require('dotenv').config()
 
 const app = express();
