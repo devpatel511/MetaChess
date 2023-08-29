@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require ('cors');
-const { aiMove } = require("js-chess-engine");
+const jsChessEngine = require('js-chess-engine')
+const { move, status, moves, aiMove, getFen } = jsChessEngine
 require('dotenv').config()
 
 const app = express();
@@ -41,7 +42,7 @@ app.post('/game/computer', async (req, res) => {
     const fen = req.body.FEN;
 
     try {
-        const move = aiMove(fen, 3);
+        const move = aiMove(fen, 2);
         res.json(move);
     } catch (error) {
         res.json(null);
