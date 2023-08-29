@@ -14,6 +14,7 @@ const Leaderboard = () => {
 
     return (
         <div className='stats-table leaderboard'>
+            <p>(server starts 30s from initial render)</p>
             <div id="lead">
             <img src="https://www.chess.com/bundles/web/images/color-icons/leaderboard.4044c4af.svg" alt=""/>
             <h2>Leaderboard</h2>

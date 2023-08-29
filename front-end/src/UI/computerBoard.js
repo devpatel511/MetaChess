@@ -4,7 +4,7 @@ import assets from './assets';
 import sound from './src_chess_assets_moveSoundEffect.mp3';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const API_BASE = "https://metachess-server.onrender.com/game/computer/"
+const API_BASE = "https://metachess-server.onrender.com/game/computer/";
 
 const audio = new Audio(sound);
 audio.muted = false;
