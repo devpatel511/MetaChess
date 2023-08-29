@@ -41,7 +41,7 @@ app.post('/game/computer', async (req, res) => {
     const fen = req.body.FEN;
 
     try {
-        const move = aiMove(fen, 2);
+        const move = aiMove(fen, 3);
         res.json(move);
     } catch (error) {
         res.json(null);
