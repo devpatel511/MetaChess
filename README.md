@@ -21,3 +21,5 @@ Have fun and enjoy the strategic challenge of MetaChess! ♟️✨
 - [ ] use Auth0 for a better login functionality
 - [ ] allow players' to undo moves and premove
 - [ ] remove hover feature for mobile version
+- [ ] highlight latest move made by opponent
+- [ ] migrate game and login rendering to server-side with next.js
