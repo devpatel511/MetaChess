@@ -23,3 +23,4 @@ Have fun and enjoy the strategic challenge of MetaChess! ♟️✨
 - [ ] remove hover feature for mobile version
 - [ ] highlight latest move made by opponent
 - [ ] migrate game and login rendering to server-side with next.js
+- [ ] add voice control for moves
