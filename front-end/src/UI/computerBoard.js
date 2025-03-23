@@ -4,7 +4,7 @@ import assets from './assets';
 import sound from './src_chess_assets_moveSoundEffect.mp3';
 import { useNavigate, useParams } from 'react-router-dom';
 
-const API_BASE = "https://metachess-server.onrender.com/game/computer/";
+const API_BASE = process.env.REACT_APP_API_BASE + "/game/computer/";
 
 const audio = new Audio(sound);
 audio.muted = false;
@@ -31,7 +31,7 @@ function Board() {
     var isGreyCell = false;
 
     useEffect(() => {
-        fetch("https://metachess-server.onrender.com/user/elo", {
+        fetch(process.env.REACT_APP_API_BASE + "/user/elo", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

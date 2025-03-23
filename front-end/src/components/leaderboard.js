@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = "https://metachess-server.onrender.com"
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 const Leaderboard = () => {
     const [users, setUsers] = useState([]);
