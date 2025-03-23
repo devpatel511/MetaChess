@@ -2,10 +2,11 @@
   "name": "mern-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm i"
+    "build": "npm i",
+    "start": "node server"
   },
   "author": "Dev Patel",
   "license": "ISC",

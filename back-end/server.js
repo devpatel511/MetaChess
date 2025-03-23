@@ -104,6 +104,6 @@ app.put("/game/computer/:userId", async (req, res) => {
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
-app.listen(3001, () => console.log("DB server started on port 3001"));
+app.listen(3000, () => console.log("Server started on port 3000"));
 
 module.exports = app;
