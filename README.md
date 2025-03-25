@@ -1,6 +1,6 @@
 ## 🌐 Visit Our Website
 
-For more information about MetaChess, visit our website at [www.metachess.me](https://www.metachess.me).
+For more information about MetaChess, visit our website at [www.metachess.me](https://metachess-dev.vercel.app/).
 
 Have fun and enjoy the strategic challenge of MetaChess! ♟️✨
 

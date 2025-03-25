@@ -14,7 +14,7 @@ const Leaderboard = () => {
 
     return (
         <div className='stats-table leaderboard'>
-            <p>(server starts 30s from initial render)</p>
+            <p style={{ color: "#12d77e" }}>(using Express.js serverless functions, refresh if not visible)</p>
             <div id="lead">
             <img src="https://www.chess.com/bundles/web/images/color-icons/leaderboard.4044c4af.svg" alt=""/>
             <h2>Leaderboard</h2>

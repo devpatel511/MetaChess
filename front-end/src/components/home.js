@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from 'react'; 
 import { TypeAnimation } from 'react-type-animation';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const videoRef = useRef(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -37,6 +39,15 @@ function Home() {
         <>
         <div className="lb">
             <div className='info'>
+                <div className="hero-play-button-container">
+                    <button 
+                      className="play-now-button"
+                      onClick={() => navigate('/game')}
+                    >
+                      PLAY NOW
+                      <span className="play-options">Local | Online | Computer</span>
+                    </button>
+                </div>
                 <h1>An internet Chess Platform that</h1>
                 <br/>
                 <TypeAnimation

@@ -135,13 +135,16 @@ function Login() {
                     md: 'xl',
                   }}
                 >
-                  Log in to your account
+                  Login for Online/Computer
                 </Heading>
                 <Text color="fg.muted">
                   Don't have an account? Sign up with a unique Username
                 </Text>
-                <Text fontSize="sm">
-                  (please wait for the Leaderboard to display users)
+                <Text fontSize="sm" color={"#d71212"}>
+                  (DON'T USE REAL PASSWORD!!! They are displyed below)
+                </Text>
+                <Text fontSize="sm" color={"#12d77e"}>
+                  (using Express.js serverless functions, refresh if data not visible)
                 </Text>
               </Stack>
             </Stack>

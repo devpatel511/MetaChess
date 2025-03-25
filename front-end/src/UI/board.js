@@ -305,7 +305,7 @@ function Board() {
             <div className='match'>
                 <div className="game__meta snipcss-sobXV">
                     <section>
-                        <div className="game__meta__infos" data-icon="">
+                        <div className="game__meta__infos" data-icon="">
                         <div>
                             <div className="header">
                             <div className="setup">

@@ -19,6 +19,63 @@ body {
     margin:0;
 }
 
+/* Top Play Now button styling */
+.hero-play-button-container {
+    margin-bottom: 30px;
+	margin-top: -100px;
+	margin-left: 100px;
+    display: flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+	.hero-play-button-container {
+		margin-top: -30px;
+		margin-left: 0;
+		justify-content: center;
+	}
+}
+
+nav .link.nav-active {
+	color: #12d77e;
+	border-bottom: 2px solid #12d77e;
+	padding-bottom: 3px;
+	transition: all 0.3s ease;
+}
+
+nav .link:hover {
+	color: #12d77e;
+	transition: all 0.3s ease;
+}
+
+.play-now-button {
+	background: linear-gradient(135deg, #12d77e 0%, #0e9e5f 100%);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 16px 32px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(18, 215, 126, 0.3);
+}
+
+.play-now-button:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 16px rgba(18, 215, 126, 0.4);
+}
+
+.play-options {
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 4px;
+	opacity: 0.9;
+}
+
 .elo-num {
 	opacity: 0.5;
 }
@@ -169,11 +226,11 @@ body {
 	  } 
 	  
 	  .color-icon.white:before { 
-		  content: "";
+		  content: "";
 	  } 
 	  
 	  .color-icon.black:before { 
-		  content: "";
+		  content: "";
 	  } 
 	  
 	  .user-link { 
